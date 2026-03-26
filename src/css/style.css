@@ -1,0 +1,334 @@
+/* ----------------------------------------
+   vivek.tech — ink on paper
+   ---------------------------------------- */
+
+:root {
+  --text: #1a1a1a;
+  --bg: #faf8f4;
+  --muted: #6b6b6b;
+  --font-serif: Georgia, 'Times New Roman', Times, serif;
+  --font-mono: 'SF Mono', 'Cascadia Code', 'Fira Code', 'Consolas', monospace;
+}
+
+/* reset */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-serif);
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* layout */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 2rem;
+  flex: 1;
+}
+
+/* ----------------------------------------
+   homepage
+   ---------------------------------------- */
+
+.site-name {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.3rem;
+}
+
+.site-tagline {
+  font-family: var(--font-serif);
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-style: italic;
+  margin-bottom: 2.5rem;
+}
+
+/* navigation */
+nav {
+  margin-bottom: 3.5rem;
+}
+
+nav a {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text);
+  text-decoration: none;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+  margin-right: 1.2rem;
+}
+
+nav a:hover {
+  opacity: 1;
+}
+
+/* quote block */
+.quote-block {
+  margin: 3rem 0;
+  padding-left: 1rem;
+  border-left: 2px solid #e0ddd8;
+}
+
+.quote-text {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--text);
+  line-height: 1.7;
+  margin-bottom: 0.4rem;
+}
+
+.quote-author {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--muted);
+}
+
+/* ----------------------------------------
+   log index
+   ---------------------------------------- */
+
+.page-title {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  margin-bottom: 2.5rem;
+}
+
+.log-year {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
+  opacity: 0.6;
+}
+
+.log-list {
+  list-style: none;
+}
+
+.log-item {
+  margin-bottom: 0.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.log-item-title {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.log-item-title a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.log-item-title a::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--text);
+  transition: width 0.25s ease;
+}
+
+.log-item-title a:hover::after {
+  width: 100%;
+}
+
+.log-item-date {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ----------------------------------------
+   log post
+   ---------------------------------------- */
+
+.log-post-title {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.4rem;
+}
+
+.meta {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--muted);
+  margin-bottom: 2.5rem;
+}
+
+/* prose — shared by log posts, now, beliefs */
+.prose {
+  font-family: var(--font-serif);
+  line-height: 1.7;
+}
+
+.prose p {
+  margin-bottom: 1.2rem;
+}
+
+.prose h2 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  font-style: italic;
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
+}
+
+.prose h3 {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  margin-top: 1.8rem;
+  margin-bottom: 0.6rem;
+}
+
+.prose ul, .prose ol {
+  margin-bottom: 1.2rem;
+  padding-left: 1.2rem;
+}
+
+.prose li {
+  margin-bottom: 0.4rem;
+}
+
+.prose blockquote {
+  padding-left: 1rem;
+  border-left: 2px solid #e0ddd8;
+  color: var(--muted);
+  font-style: italic;
+  margin: 1.5rem 0;
+}
+
+.prose code {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  background: #f0ede8;
+  padding: 0.15rem 0.35rem;
+  border-radius: 2px;
+}
+
+.prose pre {
+  background: #f0ede8;
+  padding: 1rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  border-radius: 2px;
+}
+
+.prose pre code {
+  background: none;
+  padding: 0;
+}
+
+.prose a {
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: #c0bdb8;
+  transition: text-decoration-color 0.2s ease;
+}
+
+.prose a:hover {
+  text-decoration-color: var(--text);
+}
+
+.prose hr {
+  border: none;
+  border-top: 1px solid #e0ddd8;
+  margin: 2rem 0;
+}
+
+/* back link */
+.back-link {
+  display: inline-block;
+  margin-top: 3rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.back-link:hover {
+  color: var(--text);
+}
+
+/* ----------------------------------------
+   now & beliefs pages
+   ---------------------------------------- */
+
+.page-content .prose {
+  margin-top: 0;
+}
+
+/* ----------------------------------------
+   footer
+   ---------------------------------------- */
+
+.footer {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+  text-align: center;
+}
+
+.site-age {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--muted);
+  opacity: 0.5;
+}
+
+/* ----------------------------------------
+   responsive
+   ---------------------------------------- */
+
+@media (max-width: 640px) {
+  html {
+    font-size: 16px;
+  }
+
+  .container {
+    padding: 3rem 1.25rem 2rem;
+  }
+
+  .log-item {
+    flex-direction: column;
+    gap: 0.1rem;
+    margin-bottom: 1rem;
+  }
+}

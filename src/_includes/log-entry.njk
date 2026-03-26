@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }} — vivek.tech</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <article class="log-post">
+      <h1 class="log-post-title">{{ title }}</h1>
+      <p class="meta">last updated: {{ (updated or date) | readableDate }}</p>
+      <div class="prose">
+        {{ content | safe }}
+      </div>
+      <a href="/log/" class="back-link">&larr; log</a>
+    </article>
+  </div>
+  <footer class="footer">
+    <span class="site-age" id="site-age"></span>
+  </footer>
+  <script src="/js/main.js"></script>
+</body>
+</html>

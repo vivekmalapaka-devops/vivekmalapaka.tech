@@ -1,0 +1,24 @@
+---
+layout: base.njk
+---
+
+<h1 class="site-name">Vivek Malapaka</h1>
+<p class="site-tagline">building things, figuring things out</p>
+
+<nav>
+  <a href="/log/">log</a>
+  <a href="/now/">now</a>
+  <a href="/beliefs/">beliefs</a>
+</nav>
+
+<div class="quote-block" id="quote-block">
+  <p class="quote-text" id="quote-text"></p>
+  <p class="quote-author" id="quote-author"></p>
+</div>
+
+<script>
+  var quotes = {{ quotes | dump | safe }};
+  var pick = quotes[Math.floor(Math.random() * quotes.length)];
+  document.getElementById('quote-text').textContent = '"' + pick.text + '"';
+  document.getElementById('quote-author').textContent = '— ' + pick.author;
+</script>

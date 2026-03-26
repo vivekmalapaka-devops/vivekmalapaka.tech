@@ -1,0 +1,25 @@
+---
+layout: base.njk
+title: log
+permalink: /log/
+---
+
+<h1 class="page-title">log</h1>
+
+{% set currentYear = null %}
+{% for post in collections.log %}
+  {% set postYear = (post.data.updated or post.data.date) | year %}
+  {% if postYear != currentYear %}
+    {% if currentYear != null %}</ul>{% endif %}
+    {% set currentYear = postYear %}
+    <p class="log-year">{{ currentYear }}</p>
+    <ul class="log-list">
+  {% endif %}
+    <li class="log-item">
+      <span class="log-item-title"><a href="{{ post.url }}">{{ post.data.title }}</a></span>
+      <span class="log-item-date">{{ (post.data.updated or post.data.date) | readableDate }}</span>
+    </li>
+{% endfor %}
+{% if currentYear != null %}</ul>{% endif %}
+
+<a href="/" class="back-link">&larr; home</a>

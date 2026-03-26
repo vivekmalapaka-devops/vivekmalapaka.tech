@@ -1,0 +1,5 @@
+{
+  "layout": "log-entry.njk",
+  "tags": "log",
+  "permalink": "/log/{{ page.fileSlug }}/"
+}
