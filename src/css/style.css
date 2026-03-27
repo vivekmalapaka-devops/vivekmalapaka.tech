@@ -288,6 +288,82 @@ nav a:hover {
 }
 
 /* ----------------------------------------
+   made page
+   ---------------------------------------- */
+
+.made-list {
+  list-style: none;
+}
+
+.made-item {
+  margin-bottom: 2rem;
+}
+
+.made-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.made-name {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.made-name a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.made-name a::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--text);
+  transition: width 0.25s ease;
+}
+
+.made-name a:hover::after {
+  width: 100%;
+}
+
+.made-date {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.made-desc {
+  font-family: var(--font-serif);
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-top: 0.3rem;
+  line-height: 1.5;
+}
+
+.made-link {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  display: inline-block;
+  margin-top: 0.3rem;
+}
+
+.made-link:hover {
+  color: var(--text);
+}
+
+/* ----------------------------------------
    now & beliefs pages
    ---------------------------------------- */
 
