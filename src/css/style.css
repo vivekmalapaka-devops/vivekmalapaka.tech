@@ -80,6 +80,15 @@ nav a:hover {
   opacity: 1;
 }
 
+/* homepage section label */
+.home-section-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--muted);
+  opacity: 0.6;
+  margin-bottom: 0.8rem;
+}
+
 /* quote block */
 .quote-block {
   margin: 3rem 0;
@@ -387,6 +396,21 @@ nav a:hover {
   font-size: 0.65rem;
   color: var(--muted);
   opacity: 0.5;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.colophon-link {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--muted);
+  text-decoration: none;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+.colophon-link:hover {
+  opacity: 1;
 }
 
 /* ----------------------------------------
