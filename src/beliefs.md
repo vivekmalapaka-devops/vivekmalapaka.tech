@@ -4,7 +4,7 @@ title: beliefs
 ---
 
 <h1 class="page-title">beliefs</h1>
-<p class="meta">last updated: mar 25, 2026</p>
+<p class="meta">last updated: mar 28, 2026</p>
 
 <div class="prose">
 
@@ -25,6 +25,8 @@ Things I hold to be true, loosely. These change. That's the point.
 7. Being uncertain is more useful than being confident. Confidence closes doors.
 
 8. Small, personal websites are an act of resistance against platforms that want to own your identity.
+
+9. Every organization owes an unpayable debt to open source. Most of the infrastructure the modern world runs on was built by people who gave it away for free. We should never forget that — or take it for granted.
 
 ---
 
