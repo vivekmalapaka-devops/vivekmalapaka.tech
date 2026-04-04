@@ -16,6 +16,7 @@ Beyond that:
 - Learning how systems are designed — not just built, but *thought about*
 - Reading more than I'm writing (trying to reverse that)
 - Spending too much time in the terminal and not enough outside
+- Convinced that demo environments know it's Friday and break out of spite
 
 If you're reading this and we know each other, say hi. If we don't, say hi anyway.
 

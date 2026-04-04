@@ -10,7 +10,7 @@ updated: 2026-04-01
 
 <div class="prose">
 
-Inspired by terminal pets — I just wanted something alive in my terminal.
+Inspired by VS Code pets — I just wanted something alive in my terminal.
 
 Started simple, then I kept iterating. What if you could feed it? What if there were mini-games — hangman, tic-tac-toe? What if it had moods?
 
